@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+
+## [v3.8.2]
+
+### Changed 
+
+- Upgrade Wazuh version 3.8.2. 
+
 ## [v3.8.0]
 
 ### Changed 
