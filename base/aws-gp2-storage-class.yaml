@@ -7,12 +7,27 @@
 
 # Wazuh StorageClass
 
+#apiVersion: storage.k8s.io/v1
+#kind: StorageClass
+#metadata:
+#  name: gp2-encrypted-retained
+#provisioner: kubernetes.io/aws-ebs
+#parameters:
+#  encrypted: 'true'
+#  type: gp2
+#reclaimPolicy: Retain  # Useful in case you delete the PersistentVolumeClaim
+#
+#
+#
+#
+#
+#
+#
+# Using vsphere
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
-metadata:
+metadata: 
   name: gp2-encrypted-retained
-provisioner: kubernetes.io/aws-ebs
+provisioner: kubernetes.io/vsphere-volume
 parameters:
-  encrypted: 'true'
-  type: gp2
-reclaimPolicy: Retain  # Useful in case you delete the PersistentVolumeClaim
+  diskformat: thin
